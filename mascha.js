@@ -34,7 +34,7 @@ async function sendRequest(c) {
 is_split = false;
 
 async function send(str) {
-    if (is_normal) {
+    if (is_split) {
         for (let i = str.length - 1; i >= 0; i--) {
             await sendRequest(str[i]);
         }
