@@ -31,7 +31,7 @@ async function sendRequest(c) {
   .catch(err => console.error(err));
 }
 
-is_normal = false;
+is_split = false;
 
 async function send(str) {
     if (is_normal) {
