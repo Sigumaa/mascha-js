@@ -31,14 +31,9 @@ async function sendRequest(c) {
   .catch(err => console.error(err));
 }
 
-is_split = false;
 
 async function send(str) {
-    if (is_split) {
-        for (let i = str.length - 1; i >= 0; i--) {
-            await sendRequest(str[i]);
-        }
-    } else {
-        await sendRequest(str);
-    }
+  for (let i = str.length - 1; i >= 0; i--) {
+    await sendRequest(str[i]);
+  }
 }
