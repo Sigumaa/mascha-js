@@ -18,7 +18,7 @@ rl.question('文字列を入力してください: ', (str) => {
 });
 
 async function sendRequest(c) {
-  await new Promise(resolve => setTimeout(resolve, 1000));
+  await new Promise(resolve => setTimeout(resolve, 250));
   return fetch(server+token, {
     method: "POST",
     headers: {
